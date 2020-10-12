@@ -6,7 +6,7 @@
             </div>
         </div>
     <div class="header-img">
-        <img src="../../resources/beauty-products.jpg"/>
+        <img src="../assets/beauty-products.jpg"/>
     </div>
   </div>
 </template>

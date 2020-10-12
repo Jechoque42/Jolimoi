@@ -2,15 +2,16 @@
   <div id="app">
     <Header title="This is a page for beauty product search" />
     <Main>
-      <SearchBar @productlist="setProduct($event)"/>
-      <ul class="list-render" v-if="productList">
+      <SearchBar @productdata="setProduct($event)"/>
+      <ul class="list-render" v-if="!isNoProduct">
         <li v-for="product in productList" :key="product.id">
           <strong>{{ product.brand }}</strong> - {{ product.name }}
         </li>
       </ul>
-      <div class="no-product-text" v-show="isNoProduct">
-        Sorry, no product matches your search
+      <div class="no-product-text" v-else>
+          Sorry, no product matches your search
       </div>
+      <!-- {{productList}} -->
     </Main>
   </div>
 </template>

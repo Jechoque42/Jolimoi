@@ -1,6 +1,6 @@
 <template>
   <div class="search-bar-container">
-    <input class="search-bar-input" v-model=inputResearch />
+    <input class="search-bar-input" v-model=inputSearch />
     <button class="search-bar-button" v-on:click="getProduct()" >
         Search
     </button>
@@ -12,18 +12,18 @@ import axios from 'axios'
 const api = 'https://cors-anywhere.herokuapp.com/https://skincare-api.herokuapp.com/product?q='
 
 export default {
-  name: '',
+  name: 'SearchBar',
   data: function () {
     return {
-      inputResearch: null,
+      inputSearch: null,
     }
   },
   methods: {
       getProduct() {
           axios
-          .get(api + this.inputResearch, this.$data)
+          .get(api + this.inputSearch, this.$data)
           .then(response =>
-              this.$emit('productlist', response.data)
+              this.$emit('productdata', response.data)
           )
       }
   }
