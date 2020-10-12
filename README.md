@@ -56,6 +56,11 @@ yarn install
 yarn run serve
 ```
 
+### Launch test with jest
+```
+yarn run test
+```
+
 ### Compiles and minifies for production
 ```
 yarn run build
